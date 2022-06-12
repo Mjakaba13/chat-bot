@@ -15,6 +15,5 @@ sendButton.addEventListener("click", (e) => {
       <p id="reply">Hi Madam, Welcome back.</p>
       `;
   }
-  validator();
   document.getElementById("message-input").value = null;
 });
