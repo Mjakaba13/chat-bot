@@ -7,6 +7,7 @@ let textbody = document.getElementById("textbody");
 
 sendButton.addEventListener("click", (e) => {
   e.preventDefault();
+  valid();
   textbody.innerHTML += `
   <p id="value">${document.getElementById("message-input").value}</p>
   `;
@@ -17,3 +18,10 @@ sendButton.addEventListener("click", (e) => {
   }
   document.getElementById("message-input").value = null;
 });
+
+function valid() {
+  if (document.getElementById("message-input").value.trim === "") {
+    return false;
+  }
+  // return true;
+}
